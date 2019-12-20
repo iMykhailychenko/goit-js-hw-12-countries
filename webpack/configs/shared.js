@@ -21,7 +21,7 @@ module.exports = env => ({
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               name: '[path][name].[ext]',
               limit: 10000,
@@ -34,7 +34,7 @@ module.exports = env => ({
         test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               name: '[name].[ext]',
               outputPath: 'fonts/',
